@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+    <form action="/result" method="POST">
+        <table border = 1>
+            {% for key, value in result.items() %}
+                <tr>
+                    <th> {{ key }} </th>
+                    <td><input readonly type="text" name={{ key }} value={{ value }} /></td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+        <p> 입력하신 정보가 맞으신가요? 
+            그렇다면 submit을, 아니라면 modify를 눌러 주세요.</p>
+
+        <input type="button" value="MODIFY" onclick="history.back();"/>
+        <input type="submit" value="SUBMIT"/>
+    </form>
+</body>
+</html>
