@@ -11,7 +11,7 @@
 
    <body>
    간식신청페이지
-      <form action = "{{ url_for ('check') }}" method = "POST">
+      <form action = "/check" method = "POST" id="app-form">
          <p>이름 <input type = "text" name = "Name" /></p>
          <p>학번 <input type = "text" name = "StudentNumber" /></p>
          <p>학과 <input type = "text" name = "Major" /></p>
@@ -22,12 +22,12 @@
              <label><input type="radio" name="Time" value="17:00~19:00" />17:00~19:00</label>
 
          </p>
-         <p>원하는 간식<select>
-             <option value="menu"> 참치회 </option>
-             <option value="menu"> 푸아그라 </option>
-             <option value="menu"> 캐비어 </option>
-             <option value="menu"> 와규 </option>
-             
+         <p>원하는 간식<select name="menu" form="app-form">
+             <option value="참치회"> 참치회 </option>
+             <option value="푸아그라"> 푸아그라 </option>
+             <option value="캐비어"> 캐비어 </option>
+             <option value="와규"> 와규 </option>
+
              </select><br>
 
          <p><input type = "submit" value = "CHECK" /></p>

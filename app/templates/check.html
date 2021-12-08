@@ -5,9 +5,9 @@
     <title>Detail</title>
 </head>
 <body>
-    <form action="/result" method="POST">
+    <form action="/submit" method="POST">
         <table border = 1>
-            {% for key, value in result.items() %}
+            {% for key, value in submit.items() %}
                 <tr>
                     <th> {{ key }} </th>
                     <td><input readonly type="text" name={{ key }} value={{ value }} /></td>
