@@ -36,13 +36,13 @@ def check():
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
-    Name=request.form.get('Name')
-    StudentNumber=request.form.get('StudentNumber')
-    Major=request.form.get('Major')
-    Time=request.form.get('Time')
-    menu=request.form.get('menu')
+    Name = request.form.get('Name')
+    StudentNumber = request.form.get('StudentNumber')
+    Major = request.form.get('Major')
+    Time = request.form.get('Time')
+    menu = request.form.get('menu')
 
-    return render_template('submit.html', submit = sub)
+    return render_template('submit.html', Name=Name, StudentNumber=StudentNumber, Major=Major, Time=Time, menu=menu)
 
 
 if __name__ == '__main__':
