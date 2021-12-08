@@ -36,9 +36,11 @@ def check():
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
-    uname=request.form.get('uname')
-    umajor=request.form.get('umajor')
-    grade=request.form.get('grade')
+    Name=request.form.get('Name')
+    StudentNumber=request.form.get('StudentNumber')
+    Major=request.form.get('Major')
+    Time=request.form.get('Time')
+    menu=request.form.get('menu')
 
     return render_template('submit.html', submit = sub)
 
